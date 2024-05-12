@@ -1,0 +1,34 @@
+{
+  "strategy_name": "HourBasedStrategy",
+  "params": {
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "buy_hour_max": 24,
+      "buy_hour_min": 4
+    },
+    "sell": {
+      "sell_hour_max": 21,
+      "sell_hour_min": 22
+    },
+    "protection": {},
+    "roi": {
+      "0": 0.644,
+      "453": 0.20199999999999999,
+      "628": 0.06,
+      "1657": 0
+    },
+    "stoploss": {
+      "stoploss": -0.128
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.199,
+      "trailing_stop_positive_offset": 0.28300000000000003,
+      "trailing_only_offset_is_reached": false
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2024-05-03 17:25:24.522008+00:00"
+}

@@ -4,7 +4,7 @@
 # Author: @Mablue (Masoud Azizi)
 # github: https://github.com/mablue/
 # Requires hyperopt before running.
-# freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --strategy HourBasedStrategy -e 200
+# freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --strategy HourBasedStrategy -e 100
 
 
 from freqtrade.strategy import IntParameter, IStrategy
@@ -64,17 +64,23 @@ class HourBasedStrategy(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "0": 0.528,
-        "169": 0.113,
-        "528": 0.089,
+        "0": 0.552,
+        "169": 0.133,
+        "528": 0.046,
         "1837": 0
     }
 
     # Stoploss:
-    stoploss = -0.10
+    stoploss = -0.313
 
     # Optimal timeframe
     timeframe = '1h'
+
+    # Trailing stop:
+    trailing_stop = True
+    trailing_stop_positive = 0.01
+    trailing_stop_positive_offset = 0.044
+    trailing_only_offset_is_reached = True
 
     buy_hour_min = IntParameter(0, 24, default=1, space='buy')
     buy_hour_max = IntParameter(0, 24, default=0, space='buy')
