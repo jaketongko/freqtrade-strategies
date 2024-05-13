@@ -41,24 +41,15 @@
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
-            "BTC/USDT",
-            "BCH/USDT",
-            "ETH/USDT",
-            "LINK/USDT",
-            "LTC/USDT",
-            "SOL/USDT",
-            "BNB/USDT",
-            "XRP/USDT",
-            "ADA/USDT",
-            "DOT/USDT",
-            "ETC/USDT",
-            "ALGO/USDT",
-            "LUNA/USDT"
         ]
     },
     "pairlists": [
         {
-            "method": "StaticPairList"
+            "method": "VolumePairList",
+            "number_assets": 20,
+            "sort_key": "quoteVolume",
+            "min_value": 0,
+            "refresh_period": 1800
         }
     ],
     "telegram": {
@@ -67,7 +58,7 @@
         "chat_id": ""
     },
     "api_server": {
-        "enabled": false,
+        "enabled": true,
         "listen_ip_address": "0.0.0.0",
         "listen_port": 8080,
         "verbosity": "error",
@@ -76,7 +67,7 @@
         "ws_token": "R7LHraaUTq1aJqY9yPy4VNlGXy3QcD6zgA",
         "CORS_origins": [],
         "username": "freqtrader",
-        "password": ""
+        "password": "mayang"
     },
     "bot_name": "freqtrade",
     "initial_state": "running",

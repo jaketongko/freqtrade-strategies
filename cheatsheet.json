@@ -1,0 +1,17 @@
+// download-data
+freqtrade download-data -t 1h --timerange 20240401- --config user_data/config-backtesting.json
+freqtrade download-data -t 5m --timerange 20240301- --config user_data/config-backtesting.json
+freqtrade download-data -t 5m --timerange 20240301- --config user_data/config-dev.json
+
+// single backtesting
+freqtrade backtesting --timeframe 1h --strategy HourBasedStrategy --config user_data/config-backtesting.json --timerange 20240401- --eps
+freqtrade backtesting --timeframe 15m --strategy ichiV1 --config user_data/config-backtesting.json --timerange 20240401- --eps
+freqtrade backtesting --timeframe 5m --strategy CombinedBinHAndCluc --config user_data/config-backtesting.json --timerange 20240301- --eps
+
+// multi backtesting
+freqtrade backtesting --timeframe 1h --strategy-list UniversalMACD HourBasedStrategy --config user_data/config-backtesting.json --timerange 20240401- --eps
+freqtrade backtesting --timeframe 15m --strategy-list ichiV1 NostalgiaForInfinityX HarmonicDivergence --config user_data/config-backtesting.json --timerange 20240301- --eps
+freqtrade backtesting --timeframe 5m --strategy-list ichiV1 NostalgiaForInfinityX HarmonicDivergence --config user_data/config-backtesting.json --timerange 20240301- --eps
+
+// hyperopt
+freqtrade hyperopt --hyperopt-loss SharpeHyperOptLossDaily --spaces roi stoploss trailing --strategy CombinedBinHAndCluc --config user_data/config-backtesting.json -e 
