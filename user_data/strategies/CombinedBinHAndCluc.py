@@ -27,7 +27,7 @@ class CombinedBinHAndCluc(IStrategy):
         "51": 0.02,
         "157": 0
     }
-    stoploss = -0.311 # -0.05
+    stoploss =  -0.05
     timeframe = '5m'
 
     # Trailing stop:
