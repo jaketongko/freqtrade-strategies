@@ -21,19 +21,18 @@ class CombinedBinHAndCluc(IStrategy):
     # - if the market is constantly green(like in JAN 2018) the best performance is reached with
     #   "max_open_trades" = 2 and minimal_roi = 0.01
     minimal_roi = {
-        # "0": 0.05
-        "0": 0.22,
-        "17": 0.031,
+        "0": 0.138,
+        "17": 0.041,
         "51": 0.02,
         "157": 0
     }
-    stoploss =  -0.05
+    stoploss =  -0.301
     timeframe = '5m'
 
     # Trailing stop:
     trailing_stop: True
-    trailing_stop_positive: 0.169
-    trailing_stop_positive_offset: 0.226
+    trailing_stop_positive: 0.336
+    trailing_stop_positive_offset: 0.377
     trailing_only_offset_is_reached: False
 
     use_sell_signal = True

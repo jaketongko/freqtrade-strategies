@@ -1,28 +1,28 @@
 {
   "strategy_name": "CombinedBinHAndCluc",
   "params": {
-    "max_open_trades": {
-      "max_open_trades": 10
-    },
     "buy": {},
     "sell": {},
     "protection": {},
     "roi": {
-      "0": 0.22,
-      "17": 0.031,
-      "51": 0.02,
-      "157": 0
+      "0": 0.20299999999999999,
+      "18": 0.020999999999999998,
+      "59": 0.01,
+      "98": 0
     },
     "stoploss": {
-      "stoploss": -0.311
+      "stoploss": -0.33
     },
     "trailing": {
       "trailing_stop": true,
-      "trailing_stop_positive": 0.169,
-      "trailing_stop_positive_offset": 0.226,
+      "trailing_stop_positive": 0.186,
+      "trailing_stop_positive_offset": 0.203,
       "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 1
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2024-05-13 13:51:36.399065+00:00"
+  "export_time": "2024-05-26 04:27:24.541901+00:00"
 }

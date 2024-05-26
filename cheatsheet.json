@@ -14,4 +14,4 @@ freqtrade backtesting --timeframe 15m --strategy-list ichiV1 NostalgiaForInfinit
 freqtrade backtesting --timeframe 5m --strategy-list ichiV1 NostalgiaForInfinityX HarmonicDivergence --config user_data/config-backtesting.json --timerange 20240301- --eps
 
 // hyperopt
-freqtrade hyperopt --hyperopt-loss SharpeHyperOptLossDaily --spaces roi stoploss trailing --strategy CombinedBinHAndCluc --config user_data/config-backtesting.json -e 
+freqtrade hyperopt --hyperopt-loss SharpeHyperOptLossDaily --spaces roi stoploss trailing --strategy CombinedBinHAndCluc --config user_data/config-backtesting.json -e 100
